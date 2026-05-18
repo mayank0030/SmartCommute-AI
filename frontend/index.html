@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#1a73e8">
+<meta name="description" content="Smart Commute Assistant - Real-time bus tracking for Bengaluru">
+<title>Commute Assistant</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="loading">Loading live transit data...</div>
+  <div id="app" style="display:none">
+    <header>
+      <h1>Commute Assistant</h1>
+      <span id="timeDisplay"></span>
+    </header>
+    <div id="scenarioBar">
+      <span id="scenarioLabel">Priya: Koramangala → MG Road</span>
+      <button id="refreshBtn" onclick="loadCommute()">↻</button>
+    </div>
+    <div id="searchBox">
+      <input id="routeSearch" type="text" placeholder="Search routes (e.g. 171-G, KBS-3A)..." />
+      <div id="searchResults"></div>
+    </div>
+    <div id="map"></div>
+    <div id="legend">
+      <span><span class="dot" style="background:#3fb950"></span>On time</span>
+      <span><span class="dot" style="background:#d29922"></span>Slight delay</span>
+      <span><span class="dot" style="background:#da3633"></span>Delayed</span>
+    </div>
+    <div id="cards">
+      <div id="departureCard" class="card best">
+        <div class="card-header">Smart Departure Planner</div>
+        <div id="departureContent"></div>
+      </div>
+      <div id="bestCard" class="card">
+        <div class="card-header">Best Option</div>
+        <div id="bestContent"></div>
+      </div>
+      <div id="optionsCard" class="card">
+        <div class="card-header">All Options</div>
+        <div id="optionsContent"></div>
+      </div>
+      <div id="statsCard" class="card">
+        <div class="card-header">Live Fleet</div>
+        <div id="statsContent"></div>
+      </div>
+    </div>
+  </div>
+  <div id="errorBar"></div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

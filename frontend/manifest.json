@@ -1,0 +1,12 @@
+{
+  "name": "Bengaluru Commute Assistant",
+  "short_name": "Commute",
+  "description": "Real-time bus tracking & smart commute assistant",
+  "start_url": "/app/",
+  "display": "standalone",
+  "background_color": "#0d1117",
+  "theme_color": "#1a73e8",
+  "icons": [
+    { "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚌</text></svg>", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
